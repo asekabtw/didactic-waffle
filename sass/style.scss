@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+// content
+.content {
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .content {
+    &__img {
+      display: block;
+      width: 40%;
+      max-height: 100vh;
+
+      & img {
+        width: auto;
+        min-height: 100vh;
+        display: block;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+  }
+}
+
+// info
+.info {
+  text-align: center;
+  &__logo {
+    padding-left: 2rem;
+    padding-block: 2.25rem;
+    width: 9rem;
+
+    & img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__img {
+    width: auto;
+    overflow: hidden;
+    margin-bottom: 4.5em;
+
+    & img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    letter-spacing: 0.75rem;
+    color: hsl(0, 6%, 24%);
+    margin-bottom: 1.25rem;
+
+    & span {
+      font-weight: 300;
+      color: hsl(0, 36%, 70%);
+    }
+  }
+
+  &__desc {
+    color: hsl(0, 36%, 70%);
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .info {
+    text-align: left;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    position: relative;
+
+    &-wrapper {
+      width: 60%;
+      margin-left: 8rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__logo {
+      padding: 0;
+      position: absolute;
+      top: 5%;
+    }
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__desc {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+// form
+.form {
+  &-input {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__img--error {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  &__email {
+    width: 100%;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 2rem;
+    padding-left: 1.5rem;
+    padding-block: 1rem;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: hsl(0, 36%, 70%);
+    }
+  }
+
+  &__message {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 10%;
+    color: hsl(0, 93%, 68%);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -3;
+  }
+
+  &__submit {
+    width: 4rem;
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0 0.75rem 3rem 0rem #ce9797;
+
+    background-image: url(../images/icon-arrow.svg),
+      linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .form {
+    &-input {
+      width: auto;
+    }
+
+    &__submit {
+      width: 5.5rem;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.content {
+  min-height: 100vh;
+  overflow: hidden;
+}
+.content__img {
+  display: none;
+}
+
+@media screen and (min-width: 90em) {
+  .content__img {
+    display: block;
+    width: 40%;
+    max-height: 100vh;
+  }
+  .content__img img {
+    width: auto;
+    min-height: 100vh;
+    display: block;
+  }
+  .content-wrapper {
+    display: flex;
+    min-height: 100vh;
+  }
+}
+.info {
+  text-align: center;
+}
+.info__logo {
+  padding-left: 2rem;
+  padding-block: 2.25rem;
+  width: 9rem;
+}
+.info__logo img {
+  width: 100%;
+  display: block;
+}
+.info__img {
+  width: auto;
+  overflow: hidden;
+  margin-bottom: 4.5em;
+}
+.info__img img {
+  width: 100%;
+  display: block;
+}
+.info__title {
+  font-size: 3rem;
+  letter-spacing: 0.75rem;
+  color: hsl(0deg, 6%, 24%);
+  margin-bottom: 1.25rem;
+}
+.info__title span {
+  font-weight: 300;
+  color: hsl(0deg, 36%, 70%);
+}
+.info__desc {
+  color: hsl(0deg, 36%, 70%);
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 90em) {
+  .info {
+    text-align: left;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    position: relative;
+  }
+  .info-wrapper {
+    width: 60%;
+    margin-left: 8rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .info__img {
+    display: none;
+  }
+  .info__logo {
+    padding: 0;
+    position: absolute;
+    top: 5%;
+  }
+  .info__title {
+    font-size: 5rem;
+  }
+  .info__desc {
+    width: auto;
+    margin-left: 0;
+  }
+}
+.form-input {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+.form__img--error {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.form__email {
+  width: 100%;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  border-radius: 2rem;
+  padding-left: 1.5rem;
+  padding-block: 1rem;
+  transition: 0.3s;
+}
+.form__email:focus {
+  outline: none;
+}
+.form__email::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+.form__email:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+.form__email::placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+.form__message {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 10%;
+  color: hsl(0deg, 93%, 68%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -3;
+}
+.form__submit {
+  width: 4rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0.75rem 3rem 0rem #ce9797;
+  background-image: url(../images/icon-arrow.svg), linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (min-width: 90em) {
+  .form-input {
+    width: auto;
+  }
+  .form__submit {
+    width: 5.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
